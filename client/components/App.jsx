@@ -1,17 +1,33 @@
 import React from 'react'
+import {HashRouter as Router, Route} from 'react-router-dom'
 
+// import components
+import Nav from './Nav'
+import Home from './Home'
+import Add from './Add'
 
-
-export default class App extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
-  render() {
-    return (
+const App = (props) => {
+  return (
+    <Router>
       <div>
         <h1>Ztype Score</h1>
+        <Nav />
+        <div>
+          <Route path='/' component={Home} />
+        </div>
+
       </div>
-    )
-  }
+  </Router>
+  )
 }
+
+//
+// <Router>
+// </Router>
+
+
+export default App
+
+
+
+{/* <route path='/addResult' component={Add} /> */}
