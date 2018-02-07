@@ -2,9 +2,22 @@
   "name": "ztype-score-tracker",
   "version": "1.0.0",
   "description": "A tracker to record zrtype scores",
-  "main": "index.js",
+  "main": "server/index.js",
   "repository": "https://github.com/guy-stapleton/ztype-score-tracker.git",
   "author": "Guy Stapleton <guy.stapleton+1@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "dev": "nodemon --watch",
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "jest": "^22.2.1",
+    "nodemon": "^1.14.12"
+  }
 }
