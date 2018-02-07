@@ -1,0 +1,32 @@
+So there's an issue combining router with class objects
+
+import React from 'react'
+import {Hashrouter as Router, Route} from 'react-router-dom'
+
+// import components
+import Nav from './Nav'
+import Home from './Home'
+import Add from './Add'
+
+export default class App extends React.Component {
+  constructor (props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Ztype Score</h1>
+        <Nav />
+        <Router>
+          <div>
+            <route path='/' component={Home} />
+          </div>
+        </Router>
+      </div>
+    )
+  }
+}
+
+
+You get an console messagr that React.createElemetn is invalid and points to an isue with the render method on App
