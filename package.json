@@ -1,0 +1,10 @@
+{
+  "name": "ztype-score-tracker",
+  "version": "1.0.0",
+  "description": "A tracker to record zrtype scores",
+  "main": "index.js",
+  "repository": "https://github.com/guy-stapleton/ztype-score-tracker.git",
+  "author": "Guy Stapleton <guy.stapleton+1@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
