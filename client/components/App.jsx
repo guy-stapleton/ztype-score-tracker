@@ -12,7 +12,7 @@ const App = (props) => {
     <Router>
       <div>
         <h1>Ztype Score</h1>
-        <Route path='/' component={Home} />
+        <Route exact path='/' component={Home} />
         <Route path='/add' component={Add} />
         <Route path='/recent-results' component={RecentResults} />
         <div>
@@ -23,13 +23,4 @@ const App = (props) => {
   )
 }
 
-//
-// <Router>
-// </Router>
-
-
 export default App
-
-
-
-{/* <route path='/addResult' component={Add} /> */}
