@@ -1,23 +1,43 @@
 {
   "name": "ztype-score-tracker",
   "version": "1.0.0",
-  "description": "A tracker to record zrtype scores",
+  "description": "A tracker to record ztype scores",
   "main": "server/index.js",
   "repository": "https://github.com/guy-stapleton/ztype-score-tracker.git",
   "author": "Guy Stapleton <guy.stapleton+1@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "nodemon --watch",
+    "dev": "nodemon --watch server & webpack --watch",
+    "dev-client": "webpack-dev-server --hot --inline --content-base public",
+    "dev-server": "nodemon --watch server",
+    "test": "jest --watchAll",
     "start": "node server"
   },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "react": "^16.2.0",
-    "webpack": "^3.10.0"
+    "superagent": "^3.8.2"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
     "jest": "^22.2.1",
-    "nodemon": "^1.14.12"
+    "nodemon": "^1.14.12",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "supertest": "^3.0.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
