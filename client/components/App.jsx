@@ -5,17 +5,19 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import Nav from './Nav'
 import Home from './Home'
 import Add from './Add'
+import RecentResults from './RecentResults'
 
 const App = (props) => {
   return (
     <Router>
       <div>
         <h1>Ztype Score</h1>
-        <Nav />
+        <Route path='/' component={Home} />
+        <Route path='/add' component={Add} />
+        <Route path='/recent-results' component={RecentResults} />
         <div>
-          <Route path='/' component={Home} />
+          <Nav />
         </div>
-
       </div>
   </Router>
   )
