@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const RecentResults = props => {
   return (
     <div>
-      <p>Recent Results</p>
+      <h2>Recent Results</h2>
     </div>
   )
 }

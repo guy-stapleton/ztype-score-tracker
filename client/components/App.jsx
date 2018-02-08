@@ -6,6 +6,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Add from './Add'
 import RecentResults from './RecentResults'
+import HighScores from './HighScores'
 
 const App = (props) => {
   return (
@@ -15,6 +16,7 @@ const App = (props) => {
         <Route exact path='/' component={Home} />
         <Route path='/add' component={Add} />
         <Route path='/recent-results' component={RecentResults} />
+        <Route path='/high-scores' component={HighScores} />
         <div>
           <Nav />
         </div>
