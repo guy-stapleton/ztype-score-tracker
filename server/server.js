@@ -10,7 +10,12 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 
-app.use('/', routes)
 
 
-module.exports = app
+app.use('/api', routes)
+
+
+module.exports = (db) => {
+  app.set('db', db)
+  return app
+}
