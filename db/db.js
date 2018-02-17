@@ -7,4 +7,4 @@ function getScores() {
   return db('scores').select()
 }
 
-mpdule.exports = getScores
+module.exports = getScores

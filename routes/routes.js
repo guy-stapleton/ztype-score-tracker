@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   db('scores')
   .select()
   .then(result => {
-    res.json({msg: result})
+    res.json(result)
   })
 })
 
