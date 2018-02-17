@@ -1,4 +1,7 @@
 node_modules
 *.DS_Store
 *.log
+bundle.js*
 dev.sqlite3
+*.png
+*.jpg
