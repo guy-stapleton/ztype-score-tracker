@@ -3,8 +3,12 @@ const config = require('../knexfile')[environment]
 const connection = require('knex')(config)
 
 function getScores() {
-  const db = testDb || connection
+  const db = connection
   return db('scores').select()
 }
 
-module.exports = getScores
+function logHi() {
+  console.log('Hi I am the logHi function in db.js')
+}
+
+module.exports = {getScores, logHi}

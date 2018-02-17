@@ -10,11 +10,12 @@ const getScores = require('../db/db').getScores
 
 
 router.get('/', (req, res) => {
-  var db = req.app.get('db')
-  db('scores')
-  .select()
+  getScores()
   .then(result => {
     res.json(result)
+  })
+  .catch(err => {
+    console.log(`Disaster has struck`)
   })
 })
 
