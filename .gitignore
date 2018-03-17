@@ -5,3 +5,4 @@ bundle.js*
 dev.sqlite3
 *.png
 *.jpg
+.env
