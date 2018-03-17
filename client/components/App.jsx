@@ -14,9 +14,9 @@ const App = (props) => {
       <div>
         <h1>Ztype Score</h1>
         <Route exact path='/' component={Home} />
-        <Route path='/add' component={Add} />
-        <Route path='/recent-results' component={RecentResults} />
-        <Route path='/high-scores' component={HighScores} />
+        <Route exact path='/add' component={Add} />
+        <Route exact path='/recent-results' component={RecentResults} />
+        <Route exact path='/high-scores' component={HighScores} />
         <div>
           <Nav />
         </div>
