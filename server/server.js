@@ -1,21 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const routes = require('../routes/routes')
+const scoresRoutes = require('./routes/scores')
 
 const app = express()
-
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+app.use('/api/scores', scoresRoutes)
 
-
-
-app.use('/api', routes)
-
-
-module.exports = (db) => {
-  app.set('db', db)
-  return app
-}
+module.exports = app

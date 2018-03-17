@@ -15,7 +15,7 @@ module.exports = {
       filename: ':memory:'
     },
     seeds: {
-      directory: './tests/seeds'
+      directory: './seeds'
     }
   },
 
