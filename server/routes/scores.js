@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const {getScores} = require('../db/scores')
+const {getScores, addScore, findScore} = require('../db/scores')
 
 router.get('/', (req, res) => {
   getScores()
@@ -13,5 +13,18 @@ router.get('/', (req, res) => {
   })
 })
 
+router.post('/', (req, res) => {
+  addScore(req.body)
+  .then(scoreId => {
+    console.log(scoreId)
+    findScore(scoreId)
+    .then(result => {
+      res.json(result)
+    })
+  })
+  .catch(err => {
+    return err.message
+  })
+})
 
 module.exports = router
