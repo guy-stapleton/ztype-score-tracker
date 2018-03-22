@@ -1,11 +1,38 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-const HighScores = props => {
-  return (
-    <div>
-      <h2>High Scores</h2>
-    </div>
-  )
+import {getScores} from '../actions/scores'
+
+
+class HighScores extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  componentDidMount() {
+    this.props.dispatch(getScores())
+  }
+  render() {
+    console.log(this.props.scores)
+    return (
+      <div>
+        <h2>High Scores</h2>
+        <ol id="numbered">
+        {this.props.scores.map((score, i) => {
+          return <li key={i}>{score}</li>
+        })}
+      </ol>
+      </div>
+
+    )
+  }
 }
 
-export default HighScores
+const mapStateToProps = state => {
+  let topScores = state.scores.map((score, i) => {
+    return score.score
+  })
+  let topScoresSorted = topScores.sort((a, b) => {return b-a})
+  return {scores: topScoresSorted.slice(0, 5)}
+}
+
+export default connect(mapStateToProps)(HighScores)
