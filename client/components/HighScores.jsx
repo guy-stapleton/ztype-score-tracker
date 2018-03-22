@@ -12,12 +12,15 @@ class HighScores extends React.Component {
     this.props.dispatch(getScores())
   }
   render() {
+    console.log(this.props.scores)
     return (
       <div>
         <h2>High Scores</h2>
+        <ol>
         {this.props.scores.map((score, i) => {
-          return <p key={i}>{score.score}</p>
+          return <li key={i}>{score}</li>
         })}
+      </ol>
       </div>
 
     )
@@ -25,7 +28,11 @@ class HighScores extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return {scores: state.scores}
+  let topScores = state.scores.map((score, i) => {
+    return score.score
+  })
+  let topScoresSorted = topScores.sort((a, b) => {return b-a})
+  return {scores: topScoresSorted.slice(0, 5)}
 }
 
 export default connect(mapStateToProps)(HighScores)
