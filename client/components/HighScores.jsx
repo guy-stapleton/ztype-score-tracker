@@ -16,7 +16,7 @@ class HighScores extends React.Component {
     return (
       <div>
         <h2>High Scores</h2>
-        <ol>
+        <ol id="numbered">
         {this.props.scores.map((score, i) => {
           return <li key={i}>{score}</li>
         })}
