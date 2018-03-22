@@ -33,7 +33,7 @@ p, li {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-ol li {
+ol#numbered li {
   list-style-type: decimal;
   margin-left: 2em;
 }
