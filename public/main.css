@@ -33,6 +33,11 @@ p, li {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+ol li {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+
 label {
   display: block;
   font-size: 1.4em;
