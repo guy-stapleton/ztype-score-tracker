@@ -6,7 +6,6 @@ function getScores(testDb) {
 }
 
 function addScore(score, testDb) {
-  console.log(`addScore ran`)
   const db = testDb || connection
   return db('scores')
     .insert({date: score.date,

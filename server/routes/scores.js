@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   addScore(req.body)
   .then(scoreId => {
-    console.log(scoreId)
     findScore(scoreId)
     .then(result => {
       res.json(result)
