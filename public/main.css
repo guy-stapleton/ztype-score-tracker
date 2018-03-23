@@ -67,3 +67,11 @@ input[type="submit"], input[type="button"], select {
   width: 90%;
   padding: 1em;
 }
+
+div.bar {
+  box-sizing: content-box;
+  color: #EEE;
+  background-color: #06C;
+  text-align: right;
+  vertical-align: text-top;
+}
