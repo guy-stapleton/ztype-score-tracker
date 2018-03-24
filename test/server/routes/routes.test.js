@@ -12,7 +12,7 @@ test('Checking the connection works for the api', (done) => {
     .get('/')
     .end((err, res) => {
       if(err) {
-        console.log(err.message)
+        return err.message
       }
       const actual = 200
       const expected = res.statusCode
