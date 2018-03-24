@@ -21,7 +21,7 @@ test('ADD_SCORE_TO_STORE', () => {
   const actual = reducer(
     {},
     {
-      type: 'ADD_SCORE_TO_SCORE',
+      type: 'ADD_SCORE_TO_STORE',
       score
     }
   )

@@ -11,7 +11,7 @@ export const storeScores = scores => {
 
 export const storeScore = score => {
   return {
-    type: 'ADD_SCORE_TO_SCORE',
+    type: 'ADD_SCORE_TO_STORE',
     score
   }
 }
