@@ -1,18 +1,14 @@
 const request = require('supertest')
-const jest = require('jest')
 
 // Get in components to test
-var server = require('../server/server')
-var app = server('db')
-
+var server = require('../../../server/server')
 
 test('Checking the connection works for the api', (done) => {
-  var apiUrl = 'http://localhost:3000/api'
-  request(app)
-    .get('/')
+  return request(server)
+    .get('/api/scores')
     .end((err, res) => {
       if(err) {
-        console.log(err.message)
+        return err.message
       }
       const actual = 200
       const expected = res.statusCode

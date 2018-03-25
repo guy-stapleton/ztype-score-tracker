@@ -3,7 +3,7 @@ function scores(state = [], action) {
   switch(action.type) {
     case 'ADD_SCORES_TO_STORE':
     return action.scores
-    case 'ADD_SCORE_TO_SCORE':
+    case 'ADD_SCORE_TO_STORE':
     return [...newState, action.score]
     default:
     return state
