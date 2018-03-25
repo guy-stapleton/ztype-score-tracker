@@ -6,3 +6,4 @@ dev.sqlite3
 *.png
 *.jpg
 .env
+:memory:
