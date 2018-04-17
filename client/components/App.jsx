@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router, Route} from 'react-router-dom'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 // import components
@@ -22,7 +22,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <h1>Ztype Score</h1>
+          <h1><Link to={'/'}>Ztype Score</Link></h1>
           <Route exact path='/' component={Home} />
           <Route exact path='/add' component={Add} />
           <Route exact path='/recent-results' component={RecentResults} />
